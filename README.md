@@ -1,3 +1,7 @@
+先把项目git到空文件夹：
+
+* `git clone https://github.com/RX1208/liucdk-alb-ec2-vpc.git`
+
 在 MacOS 和 Linux上创建:
 
 ```
