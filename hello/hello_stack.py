@@ -52,7 +52,7 @@ class HelloStack(cdk.Stack):
         )
            
         #创建 AutoScaling组
-        self.asg = autoscaling.AutoScalingGroup(self,"myautoscaling",
+        asg = autoscaling.AutoScalingGroup(self,"myautoscaling",
             vpc = vpc,
             #实例启动在私网子网
             vpc_subnets = ec2.SubnetSelection(subnet_type=ec2.SubnetType.PRIVATE),
@@ -76,10 +76,10 @@ class HelloStack(cdk.Stack):
         #创建alb目标组
         listener.add_targets("addTargetGroup",
             protocol = elb.ApplicationProtocol.HTTP,
-            port=7777,
+            port=80,
             
             #目标组为AutoScaling组
-            targets=[self.asg]
+            targets=[asg]
             )
         
         #输出alb的dns地址

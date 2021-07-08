@@ -1,9 +1,12 @@
-
-
-#!/bin/bash -xe
-sleep 20
-wget https://yc-helloworld.s3.ap-northeast-1.amazonaws.com/server_demo -O /root/server_demo
-wget https://yc-helloworld.s3.ap-northeast-1.amazonaws.com/conf.toml -O /root/conf.toml
-chmod a+x /root/server_demo
-cd /root
-/root/server_demo
+#!/bin/bash
+yum update -y
+amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+yum install -y httpd mariadb-server
+systemctl start httpd
+systemctl enable httpd
+usermod -a -G apache ec2-user
+chown -R ec2-user:apache /var/www
+chmod 2775 /var/www
+find /var/www -type d -exec chmod 2775 {} \;
+find /var/www -type f -exec chmod 0664 {} \;
+echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
