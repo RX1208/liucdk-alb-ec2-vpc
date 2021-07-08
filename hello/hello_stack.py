@@ -9,6 +9,7 @@ from aws_cdk import (aws_ec2 as ec2,
 ec2_type = "t2.micro"
 #定义密钥
 key_name = "hello"
+#CLI 创建密钥 aws ec2 create-key-pair --key-name hello --query 'KeyMaterial' --output text > hello.pem  	
 
 #导入用户数据文件
 with open("./userdata/data.sh") as f:
