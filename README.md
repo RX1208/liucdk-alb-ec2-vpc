@@ -1,4 +1,4 @@
-先把项目git到空文件夹：
+先把项目git到本地：
 
 * `git clone https://github.com/RX1208/liucdk-alb-ec2-vpc.git`
 
@@ -38,10 +38,9 @@ $ cdk synth
  * `cdk ls`          list all stacks in the app
  * `cdk synth`       emits the synthesized CloudFormation template
  * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk deploy --all`     部署所有堆栈
  * `cdk deploy vpc`       部署vpc堆栈
  * `cdk deploy HelloStack`  部署alb-ec2堆栈
+ * `cdk deploy --all`     部署所有堆栈
  * `cdk diff`        compare deployed stack with current state
- * `cdk docs`        open CDK documentation
 
 Enjoy!
