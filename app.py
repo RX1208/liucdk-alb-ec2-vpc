@@ -1,9 +1,6 @@
 
 import os
 
-from aws_cdk import core as cdk
-
-
 from aws_cdk import core
 from vpc.vpc_stack import VpcStack
 from hello.hello_stack import HelloStack
