@@ -1,3 +1,5 @@
+
+
 先把项目git到本地：
 
 * `git clone https://github.com/RX1208/liucdk-alb-ec2-vpc.git`
@@ -43,4 +45,11 @@ $ cdk synth
  * `cdk deploy --all`     部署所有堆栈
  * `cdk diff`        compare deployed stack with current state
 
+
+## 更新cdk,pip
+
+```
+$ sudo npm install -g aws-cdk
+$ /home/ec2-user/environment/liucdk-alb-ec2-vpc/.venv/bin/python3 -m pip install --upgrade pip
+```
 Enjoy!
