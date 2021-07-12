@@ -40,8 +40,8 @@ $ cdk synth
  * `cdk ls`          list all stacks in the app
  * `cdk synth`       emits the synthesized CloudFormation template
  * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk deploy vpc`       部署vpc堆栈
- * `cdk deploy HelloStack`  部署alb-ec2堆栈
+ * `cdk deploy vpcStack`       部署vpc堆栈
+ * `cdk deploy ec2Stack`  部署alb-ec2堆栈
  * `cdk deploy --all`     部署所有堆栈
  * `cdk diff`        compare deployed stack with current state
  * `cdk destroy`    删除堆栈
