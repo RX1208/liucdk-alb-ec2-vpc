@@ -1,4 +1,3 @@
-from aws_cdk import core as cdk
 from aws_cdk import core
 from aws_cdk import (aws_ec2 as ec2,
     aws_autoscaling as autoscaling,
@@ -16,9 +15,9 @@ with open("./userdata/data.sh") as f:
     user_data = f.read()
 
 
-class HelloStack(cdk.Stack):
+class albec2Stack(core.Stack):
 
-    def __init__(self, scope: cdk.Construct, id: str,vpc,sg_alb,sg_demo, **kwargs) -> None:
+    def __init__(self, scope: core.Construct, id: str,vpc,sg_alb,sg_demo, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
         # The code that defines your stack goes here
