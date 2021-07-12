@@ -44,6 +44,7 @@ $ cdk synth
  * `cdk deploy HelloStack`  部署alb-ec2堆栈
  * `cdk deploy --all`     部署所有堆栈
  * `cdk diff`        compare deployed stack with current state
+ * `cdk destroy`    删除堆栈
 
 
 ## 更新cdk,pip
